@@ -14,7 +14,7 @@ export default function Portfolio() {
     {
       id: 1,
       title: "Can Computers Think?",
-      excerpt: "My perspective on how 'brain-like' computers really are.",
+      excerpt: "How 'brain-like' are computers really?",
       content: articles.canCT,
       date: "December 2025",
       tags: ["Artificial Intelligence", "Philosophy"],
@@ -29,15 +29,6 @@ export default function Portfolio() {
     },
     {
       id: 3,
-      title: "What Leading a Tech Club Taught Me About People",
-      excerpt: "On leadership, empathy, and chaos.",
-      content:
-        "Leading the Google Developers Student Club wasn't just about organizing hackathons or teaching workshops—it was a masterclass in human dynamics. With 600+ participants, every event became a study in motivation, coordination, and crisis management.\n\nI learned that technical skills are necessary but insufficient for leadership. The real work happens in the invisible hours: mediating team conflicts, recognizing when someone's struggling but won't ask for help, translating ambitious visions into concrete action items that don't overwhelm people.\n\nI learned that empathy isn't softness—it's strategic. Understanding what drives each team member, what they fear, what they hope for, allows you to build systems that bring out their best work.\n\nI learned that chaos is inevitable, but your response to it sets the culture. And perhaps most importantly, I learned that leadership is about creating space for others to lead, not about being indispensable.\n\nThese lessons have shaped how I approach research collaboration and teamwork in ways no technical course ever could.",
-      date: "September 2024",
-      tags: ["Leadership", "Community"],
-    },
-    {
-      id: 4,
       title: "The room you forgot to lock",
       excerpt: "A short story about memory, loss, and what we leave behind.",
       content: articles.room,
