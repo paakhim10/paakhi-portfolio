@@ -16,17 +16,16 @@ export default function Portfolio() {
       title: "Can Computers Think?",
       excerpt: "My perspective on how 'brain-like' computers really are.",
       content: articles.canCT,
-      date: "November 2025",
+      date: "December 2025",
       tags: ["Artificial Intelligence", "Philosophy"],
     },
     {
       id: 2,
-      title: "Building Vision-Language Systems That Don't Hallucinate",
-      excerpt: "Core techniques and failure cases.",
-      content:
-        "Vision-language models have transformed how machines understand multimodal data, but they come with a critical flaw: hallucination. I've spent months benchmarking models like BLIP-2, Florence-2, and SmolVLM, and the patterns are clear.\n\nHallucinations typically emerge from three sources: insufficient grounding in visual features, over-reliance on language priors from pre-training, and misalignment between what the vision encoder captures and what the language model expects.\n\nIn safety-critical applications like AI4Safety, a single hallucinated object or misread scene can have serious consequences. The solutions? Stronger cross-attention mechanisms, retrieval-augmented architectures that verify claims against image regions, and explicit uncertainty quantification.\n\nBut perhaps most importantly: better evaluation frameworks that go beyond BLEU scores to measure factual accuracy and visual grounding. This is still an open problem, and one I'm deeply invested in solving.",
-      date: "October 2024",
-      tags: ["Computer Vision", "Multimodal AI"],
+      title: "Why Reinforcement Learning Feels Like Storytelling",
+      excerpt: "My perspective on RL, decisions, and narratives.",
+      content: articles.rlStory,
+      date: "November 2025",
+      tags: ["Creative", "AI Research", "Reinforcement Learning"],
     },
     {
       id: 3,
@@ -39,21 +38,11 @@ export default function Portfolio() {
     },
     {
       id: 4,
-      title: "The Silent Observer",
+      title: "The room you forgot to lock",
       excerpt: "A short story about memory, loss, and what we leave behind.",
-      content:
-        "The old woman sat by the window every afternoon at 3 PM. Not because she had anywhere to be or anyone to meet, but because the light hit the faded photograph on the mantle just right at that hour.\n\nHer grandson would visit on Thursdays, always asking the same questions: 'How are you feeling, Grandma? Did you eat today?' She would nod, smile, offer him tea. But what she really wanted to tell him was about the stories the light told—how it danced across the faces in that photograph, how each ray seemed to whisper a different memory.\n\nShe had been a quantum physicist once, back when women in science were rare enough to make headlines. She'd spent decades studying particles that existed in multiple states simultaneously, never quite here nor there until observed.\n\nNow, in her ninth decade, she understood those particles better than ever. Memory was like that—existing in a superposition of truth and fiction, real and imagined, until someone asked about it and the waveform collapsed into a single, definite story.\n\nThe photograph showed her wedding day. Or was it her daughter's? Sometimes she wasn't sure. The light knew, though. The light always knew.",
-      date: "December 2024",
+      content: articles.room,
+      date: "August 2025",
       tags: ["Storytelling", "Fiction"],
-    },
-    {
-      id: 5,
-      title: "Between the Lines of Code",
-      excerpt: "When debugging becomes existential.",
-      content:
-        "I've been staring at the same function for three hours. It's a simple recursive algorithm—or it should be. But somewhere between the base case and the recursive call, something breaks. Not the code. Me.\n\nThere's a particular kind of madness that comes with debugging. You start questioning everything: your logic, your syntax, your career choices, the fundamental nature of reality. Is the bug in the code, or in my understanding of what the code should do? Is there even a difference?\n\nI think about Gödel sometimes, in moments like these. His incompleteness theorems proved that within any logical system, there are truths that cannot be proven within that system. Every programming language is a logical system. Every program, a proof.\n\nWhat if the bug isn't a bug at all, but a fundamental limitation of the system itself? What if some problems are, by their very nature, unsolvable?\n\nI add another print statement. The program outputs '42'.\n\nI laugh. Of course it does.\n\nI realize I've been checking the wrong variable for three hours. The bug was in line 7. It always is.",
-      date: "November 2024",
-      tags: ["Storytelling", "Technology"],
     },
   ];
 
@@ -83,15 +72,6 @@ export default function Portfolio() {
       tags: ["Multimodal AI", "VLM", "Image Text Recognition"],
       link: "https://github.com/paakhim10/g2ap-ml-challenge",
       thumbnail: nerPic,
-    },
-    {
-      id: 4,
-      title: "Google Developers Club Leadership",
-      description:
-        "Managed 600+ participant hackathons, taught data science workshops, and led a full team while balancing creativity and execution.",
-      tags: ["Leadership", "Community Building", "Education"],
-      link: "https://www.linkedin.com/in/paakhim10",
-      thumbnail: null,
     },
   ];
 
