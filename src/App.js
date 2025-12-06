@@ -13,11 +13,11 @@ export default function Portfolio() {
   const blogs = [
     {
       id: 1,
-      title: "Why Reinforcement Learning Feels Like Storytelling",
-      excerpt: "My perspective on RL, decisions, and narratives.",
-      content: articles.rlStory,
-      date: "November 2024",
-      tags: ["AI Research", "Reinforcement Learning"],
+      title: "Can Computers Think?",
+      excerpt: "My perspective on how 'brain-like' computers really are.",
+      content: articles.canCT,
+      date: "November 2025",
+      tags: ["Artificial Intelligence", "Philosophy"],
     },
     {
       id: 2,
