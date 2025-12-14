@@ -36,6 +36,69 @@ export default function Portfolio() {
       tags: ["Storytelling", "Fiction"],
     },
   ];
+  const experiences = [
+    {
+      id: 1,
+      company: "Siemens Technology",
+      role: "Research Engineer (Contract)",
+      period: "July 2025 – Present",
+      location: "Bangalore, India",
+      description:
+        "Working in the Data & AI – Research (DAI-R), Collective Intelligence Systems (CIS) group on visual memory and cognitive architectures for intelligent agents.",
+      highlights: [
+        "Developing a dual-tier visual memory architecture (short-term and long-term) for AI agents",
+        "Using CLIP embeddings, vector databases, and Neo4j-based temporal graph reasoning",
+        "Designing intelligent memory decay mechanisms to support episodic and procedural memory",
+        "Researching robotic foundation models and physical AI use cases integrated with visual memory",
+      ],
+    },
+    {
+      id: 2,
+      company: "Siemens Technology",
+      role: "Technical Intern – Data & AI",
+      period: "May 2024 – Aug 2024, Jan 2025 – Jun 2025",
+      location: "Bangalore, India",
+      description:
+        "Worked on real-time computer vision systems for industrial safety monitoring and video analytics.",
+      highlights: [
+        "Built a real-time object detection pipeline using YOLOX with FastAPI backend and React.js frontend",
+        "Improved inference performance from ~2 FPS to ~26 FPS using DLStreamer",
+        "Implemented multi-stream video processing with layered detection models",
+        "Added user anonymisation using GStreamer for privacy-preserving video analytics",
+        "Developed restricted zone detection with real-time alerts and a centralized violations dashboard",
+      ],
+    },
+    {
+      id: 3,
+      company: "Jio Platforms Limited",
+      role: "AI / Analytics Intern",
+      period: "July 2023 – Sept 2023",
+      location: "Mumbai, India",
+      description:
+        "Worked on applied machine learning and analytics for customer behavior and operational insights.",
+      highlights: [
+        "Analyzed and visualized customer churn data using Python-based data science tools",
+        "Built a classification model achieving 90%+ accuracy to auto-categorize support tickets",
+        "Developed data-driven APIs using FastAPI",
+        "Implemented ML-based time-series baselining for anomaly detection",
+      ],
+    },
+    {
+      id: 4,
+      company: "Google Developer Student Clubs (GDSC)",
+      role: "Lead",
+      period: "July 2023 – July 2024",
+      location: "Jaypee Institute of Information Technology, Noida",
+      description:
+        "Led the official Google-backed student developer community, focusing on AI/ML education, hackathons, and inclusive technical culture.",
+      highlights: [
+        "Directed large-scale hackathons including Smart India Hackathon with 600+ participants",
+        "Organized hands-on technical workshops attended by 400+ students",
+        "Managed the core organizing team and end-to-end execution of events",
+        "Mentored students on AI/ML projects, hackathons, and early career development",
+      ],
+    },
+  ];
 
   const projects = [
     {
@@ -240,6 +303,53 @@ export default function Portfolio() {
                 safety systems at Siemens, and worked on deep learning projects
                 across vision, language, and RL.
               </p>
+            </div>
+          </section>
+
+          <section id="experience" className="px-6 md:px-12 lg:px-24 py-20">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-light mb-4">Experience</h2>
+              <p className="text-neutral-400 mb-12">
+                Research and leadership roles in AI and technology
+              </p>
+
+              <div className="space-y-8">
+                {experiences.map((exp) => (
+                  <div
+                    key={exp.id}
+                    className="border border-neutral-800 rounded p-6 hover:border-[#C76F5C] transition-colors"
+                  >
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                      <div>
+                        <h3 className="text-xl font-normal text-[#C76F5C] mb-1">
+                          {exp.role}
+                        </h3>
+                        <p className="text-neutral-300 font-light">
+                          {exp.company}
+                        </p>
+                      </div>
+                      <div className="text-neutral-500 text-sm mt-2 md:mt-0 md:text-right">
+                        <div>{exp.period}</div>
+                        <div>{exp.location}</div>
+                      </div>
+                    </div>
+                    <p className="text-neutral-400 mb-4 font-light">
+                      {exp.description}
+                    </p>
+                    <ul className="space-y-2">
+                      {exp.highlights.map((highlight, idx) => (
+                        <li
+                          key={idx}
+                          className="text-neutral-400 text-sm flex items-start gap-2"
+                        >
+                          <span className="text-[#C76F5C] mt-1">•</span>
+                          <span className="font-light">{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
 
