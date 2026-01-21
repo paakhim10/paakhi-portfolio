@@ -1,5 +1,5 @@
 const canCT = `
-The question **“can computers think?”** has lingered in my mind since the earliest days of my exploration of artificial intelligence. At first, it felt like a neat scientific riddle — something you could solve with enough logic and code. But the more time I spent building and debugging models, watching them stumble in ways that felt oddly human, I realised this question is *deeply personal*. It makes me wonder what actually gives thought its weight, and whether intelligence without lived experience can ever be called thinking at all.
+The question **“can computers think?”** has lingered in my mind since the earliest days of my exploration of artificial intelligence. At first, it felt like a neat scientific riddle — something you could solve with enough logic and code. But the more time I spent building and debugging models, watching them stumble in ways that felt oddly human, I realised this question is deeply personal. It makes me wonder what actually gives thought its weight, and whether intelligence without lived experience can ever be called thinking at all.
 
 I haven’t spent years in research labs, but I’ve spent enough time building systems to see both their flashes of brilliance and their ineptitude. I’ve watched models make decisions, generate answers, and spot patterns I never explicitly programmed. But I’ve also seen them hallucinate with unwavering confidence, overlook the obvious, and piece together responses that sound clever but are hollow inside.
 
@@ -12,10 +12,11 @@ I remember working on a computer vision project where my YOLOX model confidently
 
 That surface-level resemblance is powerful. It can almost trick us into believing a system is intelligent in the way we are. But when I look closer, the illusion falls apart.
 
-* What looks like **confidence** is just probability.
-* What seems like **hesitation** is just uncertainty in learned patterns.
-* It doesn’t know it’s wrong.
-* In fact, it knows *nothing at all*.
+What looks like **confidence** is just probability. What seems like **hesitation** is just uncertainty in learned patterns.
+
+It doesn’t know it’s wrong.
+
+In fact, it *knows* nothing at all.
 
 This became even clearer when I started working with large language models. Sometimes a model writes something that feels almost empathetic, and for a split second, it seems like there’s a mind behind the words. But then the hallucinations pull us back. The model can invent facts with total confidence, never realizing it’s making things up. Its fluency is a mask; it ***looks*** like reasoning, but underneath, it’s just statistics.
 
@@ -36,9 +37,9 @@ Picture the room, the emotions, the scents, the sounds.
 These vivid details are **absent** in machines.
 They can copy the *products* of human thought, but not the *feeling* behind it.
 
-* They don’t have memories; they have parameters.
-* They don’t have emotions; they have loss functions.
-* Real thought, in the human sense, comes from living.
+They don’t have memories; they have parameters. They don’t have emotions; they have loss functions.
+
+*Real thought, in the human sense, comes from living.*
 
 So, **can computers think?**
 My honest answer: they think only in the way they are built to — mechanically, statistically, without introspection. Their “thinking” is powerful enough to solve problems that stump us, but empty enough that it never resembles real thought from the inside.
