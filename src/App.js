@@ -164,7 +164,7 @@ export default function Portfolio() {
 
   const prevProject = () => {
     setCurrentProjectIndex(
-      (prev) => (prev - 1 + projects.length) % projects.length
+      (prev) => (prev - 1 + projects.length) % projects.length,
     );
   };
 
@@ -294,14 +294,28 @@ export default function Portfolio() {
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-light mb-8">About</h2>
               <p className="text-neutral-300 leading-relaxed text-lg font-light">
-                I'm an analytical and creative individual passionate about AI
-                research, reinforcement learning, and building intelligent
-                systems that matter. My work spans computer vision, natural
-                language processing, and multimodal AI, with a focus on
-                safety-critical applications. I've led the Google Developers
-                Student Club, published novels as a teenager, built real-world
-                safety systems at Siemens, and worked on deep learning projects
-                across vision, language, and RL.
+                I’m Paakhi, an AI engineer with a soft spot for vision-language
+                systems, real-time perception, and building intelligent tools
+                that make the world safer and more understandable. <br /> <br />
+                I’ve worked on applied AI systems at Siemens Technology, where I
+                built a real-time camera violation detection pipeline using
+                YOLOX, FastAPI, and React. There, I learned how to take an idea
+                from a research paper to a working system people can actually
+                use. I’m especially drawn to multimodal AI (models that can see,
+                read, and reason) and I’ve been experimenting with
+                vision-language architectures for fast on-device inference.
+                <br />
+                <br /> Beyond engineering, I care about storytelling, community,
+                and the human side of technology. I’ve led the Google Developer
+                Student Club at my college, founded a storytelling NPO for
+                social awareness, and spent years writing stories and poetry
+                (including publishing a novel as a teenager). I love building
+                things that feel thoughtful and intuitive — systems that merge
+                the precision of engineering with the warmth of human
+                creativity. <br /> <br />
+                Right now, I’m preparing for my master’s in AI/CS, and looking
+                for opportunities to work on VLMs, safety-critical AI, and
+                applied machine learning research.
               </p>
             </div>
           </section>
@@ -381,7 +395,7 @@ export default function Portfolio() {
                     >
                       {projects[currentProjectIndex].title}
                       {!projects[currentProjectIndex].tags.includes(
-                        "Siemens"
+                        "Siemens",
                       ) && " →"}
                     </a>
                     <p className="text-neutral-400 text-base leading-relaxed mb-6 font-light">
