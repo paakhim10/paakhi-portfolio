@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import paakhiPic from "./assets/paakhi.jpg";
 import ai4safetyPic from "./assets/AI4Safety.jpg";
 import tradeAlertPic from "./assets/tradealert.png";
@@ -29,6 +31,24 @@ export default function Portfolio() {
     },
     {
       id: 3,
+      title: "The American Dream",
+      excerpt:
+        "What happens when the pursuit of the American Dream goes wrong?",
+      content: articles.americanPie,
+      date: "September 2025",
+      tags: ["Storytelling", "Social Awareness"],
+    },
+    {
+      id: 4,
+      title: "Evaluation of Vision-Language Models for Industrial Safety",
+      excerpt:
+        "Evaluating lightweight vision-language models for real-time industrial safety applications.",
+      content: articles.lightVLM,
+      date: "August 2025",
+      tags: ["Computer Vision", "Vision-Language Models", "Industrial Safety"],
+    },
+    {
+      id: 5,
       title: "The room you forgot to lock",
       excerpt: "A short story about memory, loss, and what we leave behind.",
       content: articles.room,
@@ -39,9 +59,19 @@ export default function Portfolio() {
   const experiences = [
     {
       id: 1,
+      company: "Vamana AI",
+      role: "ML Software Engineer",
+      period: "Feb 2026 – Present",
+      location: "Bethesda, Maryland (Remote)",
+      description:
+        "Building the next-generation AI-native video infrastructures.",
+      highlights: [],
+    },
+    {
+      id: 2,
       company: "Siemens Technology",
       role: "Research Engineer (Contract)",
-      period: "July 2025 – Present",
+      period: "July 2025 – Feb 2026",
       location: "Bangalore, India",
       description:
         "Working in the Data & AI – Research (DAI-R), Collective Intelligence Systems (CIS) group on visual memory and cognitive architectures for intelligent agents.",
@@ -53,7 +83,7 @@ export default function Portfolio() {
       ],
     },
     {
-      id: 2,
+      id: 3,
       company: "Siemens Technology",
       role: "Technical Intern – Data & AI",
       period: "May 2024 – Aug 2024, Jan 2025 – Jun 2025",
@@ -69,7 +99,7 @@ export default function Portfolio() {
       ],
     },
     {
-      id: 3,
+      id: 4,
       company: "Jio Platforms Limited",
       role: "AI / Analytics Intern",
       period: "July 2023 – Sept 2023",
@@ -84,7 +114,7 @@ export default function Portfolio() {
       ],
     },
     {
-      id: 4,
+      id: 5,
       company: "Google Developer Student Clubs (GDSC)",
       role: "Lead",
       period: "July 2023 – July 2024",
@@ -654,15 +684,115 @@ export default function Portfolio() {
                     {selectedBlog.date}
                   </span>
                 </div>
-                <div className="prose prose-lg prose-invert max-w-none">
-                  {selectedBlog.content.split("\n\n").map((paragraph, idx) => (
-                    <p
-                      key={idx}
-                      className="text-neutral-300 leading-relaxed mb-6 font-light"
-                    >
-                      {paragraph}
-                    </p>
-                  ))}
+                <div className="max-w-[850px] mx-auto space-y-6 text-neutral-300 leading-relaxed">
+                  <ReactMarkdown
+                    remarkPlugins={[remarkGfm]}
+                    components={{
+                      h1: ({ node, ...props }) => (
+                        <h1
+                          className="text-3xl font-semibold text-[#C76F5C] mt-10 mb-6 tracking-tight"
+                          {...props}
+                        >
+                          {props.children}
+                        </h1>
+                      ),
+                      h2: ({ node, ...props }) => (
+                        <h2
+                          className="text-2xl font-medium text-[#D18A75] mt-10 mb-4 tracking-tight"
+                          {...props}
+                        >
+                          {props.children}
+                        </h2>
+                      ),
+                      p: ({ node, ...props }) => (
+                        <p
+                          className="text-neutral-300 leading-relaxed mb-4 font-light"
+                          {...props}
+                        >
+                          {props.children}
+                        </p>
+                      ),
+                      ul: ({ node, ...props }) => (
+                        <ul
+                          className="list-disc pl-6 mb-4 space-y-2"
+                          {...props}
+                        >
+                          {props.children}
+                        </ul>
+                      ),
+                      ol: ({ node, ...props }) => (
+                        <ol
+                          className="list-decimal pl-6 mb-4 space-y-2"
+                          {...props}
+                        >
+                          {props.children}
+                        </ol>
+                      ),
+                      li: ({ node, ...props }) => (
+                        <li className="mb-1" {...props}>
+                          {props.children}
+                        </li>
+                      ),
+                      hr: () => <hr className="border-neutral-800 my-8" />,
+
+                      table: ({ node, ...props }) => (
+                        <div className="overflow-x-auto my-6">
+                          <table
+                            className="min-w-full border-collapse border border-neutral-800 text-sm"
+                            {...props}
+                          >
+                            {props.children}
+                          </table>
+                        </div>
+                      ),
+                      thead: ({ node, ...props }) => (
+                        <thead
+                          className="bg-neutral-900 text-neutral-200"
+                          {...props}
+                        />
+                      ),
+                      th: ({ node, ...props }) => (
+                        <th
+                          className="border border-neutral-700 px-3 py-2 font-medium text-left"
+                          {...props}
+                        >
+                          {props.children}
+                        </th>
+                      ),
+                      td: ({ node, ...props }) => (
+                        <td
+                          className="border border-neutral-800 px-3 py-2 text-neutral-300"
+                          {...props}
+                        >
+                          {props.children}
+                        </td>
+                      ),
+
+                      strong: ({ node, ...props }) => (
+                        <strong
+                          className="text-neutral-100 font-semibold"
+                          {...props}
+                        >
+                          {props.children}
+                        </strong>
+                      ),
+                      em: ({ node, ...props }) => (
+                        <em className="text-neutral-400 italic" {...props}>
+                          {props.children}
+                        </em>
+                      ),
+                      code: ({ node, ...props }) => (
+                        <code
+                          className="bg-neutral-900 px-2 py-1 rounded text-sm"
+                          {...props}
+                        >
+                          {props.children}
+                        </code>
+                      ),
+                    }}
+                  >
+                    {selectedBlog.content}
+                  </ReactMarkdown>
                 </div>
               </>
             )}
