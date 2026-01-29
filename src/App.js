@@ -59,10 +59,10 @@ export default function Portfolio() {
   const experiences = [
     {
       id: 1,
-      company: "Vamana AI",
+      company: "Stealth Startup",
       role: "ML Software Engineer",
       period: "Feb 2026 – Present",
-      location: "Bethesda, Maryland (Remote)",
+      location: "San Francisco, California (Remote)",
       description:
         "Building the next-generation AI-native video infrastructures.",
       highlights: [],
@@ -328,8 +328,9 @@ export default function Portfolio() {
                 systems, real-time perception, and building intelligent tools
                 that make the world safer and more understandable. <br /> <br />
                 I’ve worked on applied AI systems at Siemens Technology, where I
-                built a real-time camera violation detection pipeline using
-                YOLOX, FastAPI, and React. There, I learned how to take an idea
+                developed real-time computer vision pipelines for industrial
+                safety and researched on robotic foundation models and visual
+                memory among other things. There, I learned how to take an idea
                 from a research paper to a working system people can actually
                 use. I’m especially drawn to multimodal AI (models that can see,
                 read, and reason) and I’ve been experimenting with
@@ -343,9 +344,11 @@ export default function Portfolio() {
                 things that feel thoughtful and intuitive — systems that merge
                 the precision of engineering with the warmth of human
                 creativity. <br /> <br />
-                Right now, I’m preparing for my master’s in AI/CS, and looking
-                for opportunities to work on VLMs, safety-critical AI, and
-                applied machine learning research.
+                Right now, I’m preparing for my master’s in AI/CS, and tinkering
+                with projects in computer vision, multimodal learning, and
+                storytelling through AI. If you’re interested in collaborating
+                on research, building something cool, or just want to chat about
+                AI and stories, please reach out!
               </p>
             </div>
           </section>
