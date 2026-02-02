@@ -15,6 +15,14 @@ export default function Portfolio() {
   const blogs = [
     {
       id: 1,
+      title: "hearse of the alive",
+      excerpt: "A poetry on the aftermath of war.",
+      content: articles.hearse,
+      date: "February 2026",
+      tags: ["Storytelling", "Poetry", "Social Awareness"],
+    },
+    {
+      id: 2,
       title: "Can Computers Think?",
       excerpt: "How 'brain-like' are computers really?",
       content: articles.canCT,
@@ -22,7 +30,7 @@ export default function Portfolio() {
       tags: ["Artificial Intelligence", "Philosophy"],
     },
     {
-      id: 2,
+      id: 3,
       title: "Why Reinforcement Learning Feels Like Storytelling",
       excerpt: "My perspective on RL, decisions, and narratives.",
       content: articles.rlStory,
@@ -30,7 +38,7 @@ export default function Portfolio() {
       tags: ["Creative", "AI Research", "Reinforcement Learning"],
     },
     {
-      id: 3,
+      id: 4,
       title: "The American Dream",
       excerpt:
         "What happens when the pursuit of the American Dream goes wrong?",
@@ -39,7 +47,7 @@ export default function Portfolio() {
       tags: ["Storytelling", "Social Awareness"],
     },
     {
-      id: 4,
+      id: 5,
       title: "Evaluation of Vision-Language Models for Industrial Safety",
       excerpt:
         "Evaluating lightweight vision-language models for real-time industrial safety applications.",
@@ -48,7 +56,7 @@ export default function Portfolio() {
       tags: ["Computer Vision", "Vision-Language Models", "Industrial Safety"],
     },
     {
-      id: 5,
+      id: 6,
       title: "The room you forgot to lock",
       excerpt: "A short story about memory, loss, and what we leave behind.",
       content: articles.room,

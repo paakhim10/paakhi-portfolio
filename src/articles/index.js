@@ -3,6 +3,7 @@ import rlStory from "./rlStory";
 import room from "./room";
 import americanPie from "./americanPie";
 import lightVLM from "./lightVLM";
+import hearse from "./hearse";
 // Add future imports cleanly here
 
 const articles = {
@@ -11,6 +12,7 @@ const articles = {
   room,
   americanPie,
   lightVLM,
+  hearse,
   // Add future exports cleanly here
 };
 
