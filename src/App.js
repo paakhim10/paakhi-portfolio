@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { Analytics } from "@vercel/analytics/react";
 import paakhiPic from "./assets/paakhi.jpg";
 import ai4safetyPic from "./assets/AI4Safety.jpg";
 import tradeAlertPic from "./assets/tradealert.png";
@@ -810,6 +811,7 @@ export default function Portfolio() {
           </div>
         </div>
       )}
+      <Analytics />
     </div>
   );
 }
