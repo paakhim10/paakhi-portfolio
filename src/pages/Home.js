@@ -156,8 +156,7 @@ export default function Home() {
                   {p.title.split("—")[0].trim()}
                   {p.link && (
                     <span className="text-dim group-hover:text-accent-soft transition-colors">
-                      {" "}
-                      ↗
+                      {" ↗︎"}
                     </span>
                   )}
                 </h3>

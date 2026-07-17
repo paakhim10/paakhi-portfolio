@@ -32,8 +32,10 @@ export default function BloomCanvas() {
 
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
+    // No cursor on touch devices — keep only the ambient lines there.
+    const finePointer = matchMedia("(hover: hover) and (pointer: fine)").matches;
     let W, H;
-    const pal = readPalette();
+    let pal = readPalette();
     let doodle = getDoodle();
     let raf;
     let lastT = 0;
@@ -214,10 +216,21 @@ export default function BloomCanvas() {
     }
 
     function frame(t) {
+      // The palette variables may not be readable on the very first frames
+      // (slow CSS apply on mobile) — retry instead of stroking in black.
+      if (!pal.accent || !pal.base) {
+        pal = readPalette();
+        raf = requestAnimationFrame(frame);
+        return;
+      }
       const dt = Math.min((t - lastT) / 1000, 0.05);
       lastT = t;
       ctx.clearRect(0, 0, W, H);
       drawLines(t);
+      if (!finePointer) {
+        raf = requestAnimationFrame(frame);
+        return;
+      }
       updateAnchor(t, dt);
       if (t - lastIdleBloom > 2600 + Math.random() * 2000) {
         transient.push({
@@ -266,10 +279,12 @@ export default function BloomCanvas() {
 
     resize();
     window.addEventListener("resize", resize);
-    window.addEventListener("mousemove", onMove);
-    window.addEventListener("mouseout", onOut);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener(DOODLE_EVENT, onDoodleChange);
+    if (finePointer) {
+      window.addEventListener("mousemove", onMove);
+      window.addEventListener("mouseout", onOut);
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener(DOODLE_EVENT, onDoodleChange);
+    }
     raf = requestAnimationFrame(frame);
 
     return () => {
