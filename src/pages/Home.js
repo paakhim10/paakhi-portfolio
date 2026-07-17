@@ -209,6 +209,40 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Contact */}
+      <section id="contact" className="mt-14 scroll-mt-8">
+        <SectionHead n="05" title="Contact" />
+        <div className="relative overflow-hidden border border-rule rounded-[14px] p-6 md:p-8 bg-gradient-to-b from-panel to-transparent">
+          <span
+            aria-hidden="true"
+            className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-accent to-transparent"
+          />
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-5">
+            <div>
+              <p className="font-display text-lg font-medium">Get in touch</p>
+              <p className="text-dim text-[14.5px] font-light mt-1 max-w-[52ch]">
+                I'm open to research collaborations, interesting projects, and
+                thoughtful conversations about AI and technology.
+              </p>
+            </div>
+            <div className="flex items-center gap-4 flex-wrap">
+              <a
+                href="mailto:paakhimaheshwari@gmail.com"
+                className="px-5 py-2.5 text-sm font-display font-medium bg-accent text-page rounded-[10px] hover:brightness-110 hover:-translate-y-px transition-all"
+              >
+                Email me
+              </a>
+              <a
+                href="mailto:paakhimaheshwari@gmail.com"
+                className="font-mono text-[12.5px] text-dim hover:text-accent-soft transition-colors"
+              >
+                paakhimaheshwari@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

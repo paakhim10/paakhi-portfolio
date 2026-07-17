@@ -2,10 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer
-      id="contact"
-      className="relative z-10 max-w-[960px] mx-auto px-6 mt-16 pb-10"
-    >
+    <footer className="relative z-10 max-w-[960px] mx-auto px-6 mt-16 pb-10">
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-3 pt-5 border-t border-rule text-[13px] text-faint">
         <span>© 2026 Paakhi Maheshwari</span>
         <div className="flex gap-5">
