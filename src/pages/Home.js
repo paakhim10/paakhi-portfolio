@@ -18,9 +18,7 @@ export default function Home() {
     try {
       await navigator.clipboard.writeText(EMAIL);
     } catch {
-      // clipboard API unavailable (e.g. http) — fall back to a mailto attempt
-      window.location.href = `mailto:${EMAIL}`;
-      return;
+      return; // clipboard unavailable — the mailto button still works
     }
     setCopied(true);
     clearTimeout(copyTimer.current);
@@ -204,22 +202,12 @@ export default function Home() {
               <WritingRow key={article.slug} article={article} />
             ))}
           </div>
-          <div className="flex items-center gap-5 mt-3.5">
-            <Link
-              to="/writing"
-              className="text-sm text-dim hover:text-accent-soft transition-colors"
-            >
-              All writing →
-            </Link>
-            <a
-              href="https://paakhim10.substack.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-dim hover:text-accent-soft transition-colors"
-            >
-              {"Substack ↗︎"}
-            </a>
-          </div>
+          <Link
+            to="/writing"
+            className="inline-block mt-3.5 text-sm text-dim hover:text-accent-soft transition-colors"
+          >
+            All writing →
+          </Link>
         </div>
         <div id="about" className="scroll-mt-8">
           <SectionHead n="04" title="About" />
@@ -255,18 +243,19 @@ export default function Home() {
               </p>
             </div>
             <div className="flex items-center gap-4 flex-wrap">
-              <button
-                onClick={copyEmail}
-                className="px-5 py-2.5 text-sm font-display font-medium bg-accent text-page rounded-[10px] hover:brightness-110 hover:-translate-y-px transition-all"
-              >
-                {copied ? "Copied ✓" : "Copy email"}
-              </button>
               <a
                 href={`mailto:${EMAIL}`}
+                className="px-5 py-2.5 text-sm font-display font-medium bg-accent text-page rounded-[10px] hover:brightness-110 hover:-translate-y-px transition-all"
+              >
+                Email me
+              </a>
+              <button
+                onClick={copyEmail}
+                title="copy to clipboard"
                 className="font-mono text-[12.5px] text-dim hover:text-accent-soft transition-colors"
               >
-                {EMAIL}
-              </a>
+                {copied ? "copied ✓" : EMAIL}
+              </button>
             </div>
           </div>
         </div>
