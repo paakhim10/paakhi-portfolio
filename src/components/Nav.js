@@ -46,14 +46,6 @@ export default function Nav() {
         >
           Writing
         </Link>
-        <a
-          href="https://paakhim10.substack.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[14.5px] text-dim hover:text-accent-soft transition-colors"
-        >
-          {"Substack ↗︎"}
-        </a>
         <button
           onClick={() => goToSection("contact")}
           className="text-[14.5px] text-dim hover:text-accent-soft transition-colors"

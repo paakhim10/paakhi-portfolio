@@ -89,6 +89,14 @@ export default function Home() {
                 LinkedIn
               </a>
               <a
+                href="https://paakhim10.substack.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-[17px] py-2 text-sm font-display font-medium border border-rule rounded-[10px] text-dim hover:border-accent hover:text-ink hover:-translate-y-px transition-all"
+              >
+                Substack
+              </a>
+              <a
                 href="mailto:paakhimaheshwari@gmail.com"
                 className="px-[17px] py-2 text-sm font-display font-medium border border-rule rounded-[10px] text-dim hover:border-accent hover:text-ink hover:-translate-y-px transition-all"
               >
@@ -202,12 +210,22 @@ export default function Home() {
               <WritingRow key={article.slug} article={article} />
             ))}
           </div>
-          <Link
-            to="/writing"
-            className="inline-block mt-3.5 text-sm text-dim hover:text-accent-soft transition-colors"
-          >
-            All writing →
-          </Link>
+          <div className="flex items-center gap-5 mt-3.5">
+            <Link
+              to="/writing"
+              className="text-sm text-dim hover:text-accent-soft transition-colors"
+            >
+              All writing →
+            </Link>
+            <a
+              href="https://paakhim10.substack.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-dim hover:text-accent-soft transition-colors"
+            >
+              {"Substack ↗︎"}
+            </a>
+          </div>
         </div>
         <div id="about" className="scroll-mt-8">
           <SectionHead n="04" title="About" />
