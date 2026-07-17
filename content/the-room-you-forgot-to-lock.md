@@ -1,4 +1,10 @@
-const room = `
+---
+title: The room you forgot to lock
+excerpt: A short story about memory, loss, and what we leave behind.
+date: 2025-08-05
+type: story
+tags: [Fiction]
+---
 I hold so much, yet I own so little. The laughs, the tears, the voices of those who once lived in me are absorbed by my walls — replayed in echoes, day after day.
 
 You have changed, haven't you? You won't crawl on the floor, reaching your hand for the bed to get up. Will you mark me with the memories? Draw on me those confused landscapes, where trees grew out of roofs and cows flew in the sky? Those sketches might be smudged by time, but the ink still seeps into me. It still makes me another fragment of who you used to be when you were free.
@@ -48,6 +54,3 @@ You whisper something.
 *'Mom?'*
 
 ![](/assets/room/photo.png)
-`;
-
-export default room;

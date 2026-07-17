@@ -11,6 +11,10 @@
 # production
 /build
 
+# local-only notes and design references
+guide.md
+design-mockups/
+
 # misc
 .DS_Store
 .env.local

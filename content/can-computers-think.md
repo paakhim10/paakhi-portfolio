@@ -1,4 +1,10 @@
-const canCT = `
+---
+title: Can Computers Think?
+excerpt: How 'brain-like' are computers really?
+date: 2025-12-01
+type: essay
+tags: [Artificial Intelligence, Philosophy]
+---
 The question **“can computers think?”** has lingered in my mind since the earliest days of my exploration of artificial intelligence. At first, it felt like a neat scientific riddle — something you could solve with enough logic and code. But the more time I spent building and debugging models, watching them stumble in ways that felt oddly human, I realised this question is deeply personal. It makes me wonder what actually gives thought its weight, and whether intelligence without lived experience can ever be called thinking at all.
 
 I haven’t spent years in research labs, but I’ve spent enough time building systems to see both their flashes of brilliance and their ineptitude. I’ve watched models make decisions, generate answers, and spot patterns I never explicitly programmed. But I’ve also seen them hallucinate with unwavering confidence, overlook the obvious, and piece together responses that sound clever but are hollow inside.
@@ -56,6 +62,3 @@ That difference isn’t a flaw — it’s a reminder of what makes human thought
 
 Maybe the future will blur this line.
 Right now, the space between computation and consciousness is still ours alone.
-
-`;
-export default canCT;

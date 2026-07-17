@@ -1,4 +1,10 @@
-const lightVLM = `
+---
+title: Evaluation of Vision-Language Models for Industrial Safety
+excerpt: Evaluating lightweight vision-language models for real-time industrial safety applications.
+date: 2025-08-20
+type: research
+tags: [Computer Vision, Vision-Language Models, Industrial Safety]
+---
 
 ## 1. Introduction
 
@@ -165,6 +171,3 @@ The following **questions were asked** to each model:
 - This indicates a need for **domain-specific fine-tuning** or VQA models trained on safety-oriented datasets to ensure reliability in **real-world safety-critical deployments**.
 
 ---
-
-`;
-export default lightVLM;

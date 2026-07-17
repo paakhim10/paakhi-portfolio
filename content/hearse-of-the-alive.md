@@ -1,4 +1,10 @@
-const hearse = `
+---
+title: hearse of the alive
+excerpt: A poem on the aftermath of war.
+date: 2026-02-01
+type: poem
+tags: [Poetry, Social Awareness]
+---
 > *And the victors march down the halls,*  
 > *with candles burning through their palls.*  
 > *while the caged men writhe and fray,*  
@@ -17,7 +23,4 @@ const hearse = `
 > *the hearse of the alive carries no pain,*  
 > *while the flame of the dead lies scorching.*  
  
-![](assets/hearse.PNG)
-`;
-
-export default hearse;
+![](/assets/hearse.PNG)

@@ -1,4 +1,10 @@
-const americanPie = `
+---
+title: The American Dream
+excerpt: What happens when the pursuit of the American Dream goes wrong?
+date: 2025-09-01
+type: story
+tags: [Fiction, Social Awareness]
+---
 *"Bye-bye, Miss American Pie"*
 
 *Drove my Chevy to the levee, but the levee was dry*
@@ -76,6 +82,3 @@ I was now sitting in my backyard. The morning hours are no longer as endearing a
 *And singin', “This’ll be the day that I die”*
 
 *This will be the day that I die…*
-`;
-
-export default americanPie;
