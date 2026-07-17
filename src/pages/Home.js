@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import paakhiPic from "../assets/paakhi.jpg";
 import experiences from "../data/experiences";
@@ -7,8 +7,27 @@ import { articles } from "../lib/content";
 import WritingRow from "../components/WritingRow";
 import SectionHead from "../components/SectionHead";
 
+const EMAIL = "paakhimaheshwari@gmail.com";
+
 export default function Home() {
   const location = useLocation();
+  const [copied, setCopied] = useState(false);
+  const copyTimer = useRef(null);
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+    } catch {
+      // clipboard API unavailable (e.g. http) — fall back to a mailto attempt
+      window.location.href = `mailto:${EMAIL}`;
+      return;
+    }
+    setCopied(true);
+    clearTimeout(copyTimer.current);
+    copyTimer.current = setTimeout(() => setCopied(false), 2000);
+  };
+
+  useEffect(() => () => clearTimeout(copyTimer.current), []);
 
   useEffect(() => {
     const target = location.state?.scrollTo;
@@ -185,12 +204,22 @@ export default function Home() {
               <WritingRow key={article.slug} article={article} />
             ))}
           </div>
-          <Link
-            to="/writing"
-            className="inline-block mt-3.5 text-sm text-dim hover:text-accent-soft transition-colors"
-          >
-            All writing →
-          </Link>
+          <div className="flex items-center gap-5 mt-3.5">
+            <Link
+              to="/writing"
+              className="text-sm text-dim hover:text-accent-soft transition-colors"
+            >
+              All writing →
+            </Link>
+            <a
+              href="https://paakhim10.substack.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-dim hover:text-accent-soft transition-colors"
+            >
+              {"Substack ↗︎"}
+            </a>
+          </div>
         </div>
         <div id="about" className="scroll-mt-8">
           <SectionHead n="04" title="About" />
@@ -226,17 +255,17 @@ export default function Home() {
               </p>
             </div>
             <div className="flex items-center gap-4 flex-wrap">
-              <a
-                href="mailto:paakhimaheshwari@gmail.com"
+              <button
+                onClick={copyEmail}
                 className="px-5 py-2.5 text-sm font-display font-medium bg-accent text-page rounded-[10px] hover:brightness-110 hover:-translate-y-px transition-all"
               >
-                Email me
-              </a>
+                {copied ? "Copied ✓" : "Copy email"}
+              </button>
               <a
-                href="mailto:paakhimaheshwari@gmail.com"
+                href={`mailto:${EMAIL}`}
                 className="font-mono text-[12.5px] text-dim hover:text-accent-soft transition-colors"
               >
-                paakhimaheshwari@gmail.com
+                {EMAIL}
               </a>
             </div>
           </div>

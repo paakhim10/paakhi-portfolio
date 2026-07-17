@@ -29,6 +29,14 @@ export default function Footer() {
             LinkedIn
           </a>
           <a
+            href="https://paakhim10.substack.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-accent-soft transition-colors"
+          >
+            Substack
+          </a>
+          <a
             href="/Paakhi-Maheshwari-Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"

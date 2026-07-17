@@ -37,7 +37,15 @@ export default function Writing() {
           Writing<span className="text-accent">.</span>
         </h1>
         <p className="text-dim font-light mt-2">
-          Technical research, storytelling, and everything in between
+          Technical research, storytelling, and everything in between —{" "}
+          <a
+            href="https://paakhim10.substack.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-accent-soft hover:text-accent transition-colors"
+          >
+            {"also on Substack ↗︎"}
+          </a>
         </p>
       </div>
 
